@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ReflectionSampleApp.iml" filepath="$PROJECT_DIR$/ReflectionSampleApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/integrationmodule/integrationmodule.iml" filepath="$PROJECT_DIR$/integrationmodule/integrationmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module1api/module1api.iml" filepath="$PROJECT_DIR$/module1api/module1api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module2api/module2api.iml" filepath="$PROJECT_DIR$/module2api/module2api.iml" />
+    </modules>
+  </component>
+</project>
