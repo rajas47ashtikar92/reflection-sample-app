@@ -35,11 +35,9 @@ public class IntegrationModuleFunctionality {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             //add your fallback mechanism here
-            System.out.println("Illegal Access");
             e.printStackTrace();
         } catch (InstantiationException e) {
             //add your fallback mechanism here
-            System.out.println("Cannot instantiate");
             e.printStackTrace();
         }
     }
