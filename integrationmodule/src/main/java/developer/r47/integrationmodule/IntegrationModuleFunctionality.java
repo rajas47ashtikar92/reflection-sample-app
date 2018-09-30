@@ -2,6 +2,7 @@ package developer.r47.integrationmodule;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class IntegrationModuleFunctionality {
@@ -30,6 +31,22 @@ public class IntegrationModuleFunctionality {
             Field[] declaredFields = cls.getDeclaredFields();
 
             Object clsObject = cls.newInstance();
+
+            //to get a specific method at the runtime pass the name of the method
+            Method method = cls.getDeclaredMethod("getModule1Functionality");
+
+            //since the method in question is static the object on which it needs to be called is null
+            //else you can pass `clsObject` from above as the parameter to the method below
+
+            /*the invoke(Object, obj, Object... args) method takes the object on which the method needs to be
+             * invoked as a parameter, and the arguments that are required by the method you are trying to invoke
+             * as the second argument*/
+
+            /*
+             * It throws `NoSuchMethodException` which you will have to handle*/
+            Object object = method.invoke(null);
+
+            //take action as the module you were looking for exists
         } catch (ClassNotFoundException e) {
             //add your fallback mechanism here
             e.printStackTrace();
@@ -38,6 +55,10 @@ public class IntegrationModuleFunctionality {
             e.printStackTrace();
         } catch (InstantiationException e) {
             //add your fallback mechanism here
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
     }
